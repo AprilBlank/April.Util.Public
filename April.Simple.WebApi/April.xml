@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>April.Simple.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:April.Simple.WebApi.Controllers.WeatherForecastController.Get">
+            <summary>
+            示例获取
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:April.Simple.WebApi.Controllers.WeatherForecastController.Code(System.Int32)">
+            <summary>
+            验证码
+            </summary>
+            <param name="type">是否画线</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

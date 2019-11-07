@@ -1,37 +1,53 @@
-# April.Util.Public
+# April.Util
 
 #### 介绍
-通用公共类库整合
 
-#### 软件架构
-软件架构说明
+适用于netcore通用公共类库整合
 
+#### 已整合类库
 
-#### 安装教程
+- 通用配置 **AprilConfig，AprilEnums**
+- 缓存相关 **CacheUtil，CookieUtil，SessionUtil，RedisUtil**
+- 日志相关 **LogUtil**
+- 路径请求相关 **UriUtil**
+- 回调相关 **ResponseUtil**
+- 时间处理相关 **DateUtil**
+- 验证码相关 **CodeUtil**
+- 管理员相关 **TokenUtil**
+- 加密相关 **EncrypUtil**
+- Aop相关 **AprilLogAttribute**
+- 其他扩展类
+- *未完待续*
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+#### 引入
 
-#### 使用说明
+教程地址：[net core WebApi——公用库April.Util公开及发布]()
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+##### dll
 
-#### 参与贡献
+可直接下载源码生成dll文件引入，但需通过NuGet包引入依赖库。
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+- log4net
+- Microsoft.AspNetCore.Http.Abstractions
+- Microsoft.AspNetCore.Http.Extensions
+- Microsoft.AspNetCore.Mvc.Abstractions
+- Microsoft.AspNetCore.Session
+- Microsoft.Extensions.Caching.Memory
+- Microsoft.Extensions.Configuration
+- Newtonsoft.Json
+- QRCoder
+- StackExchange.Redis
+- System.Drawing.Common
+- *未完待续*
 
+##### NuGet
 
-#### 码云特技
+下载源码打包生成NuGet包，可直接引入工程。
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 求赞
+
+如果这套基础工程对你有帮助，就给点个赞吧~
+
+#### 更新日志
+
+- 2019-11-7 April.Util.1.0 先出来了
