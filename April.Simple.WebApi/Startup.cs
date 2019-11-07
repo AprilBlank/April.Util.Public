@@ -52,7 +52,7 @@ namespace April.Simple.WebApi
                 options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1.1.0",
-                    Title = "ERP WebAPI",
+                    Title = "April WebAPI",
                     Description = "ºóÌ¨¿ò¼Ü",
                     Contact = new OpenApiContact() { Name = "Blank", Email = "1829027193@qq.com", Url = new Uri("https://www.cnblogs.com/AprilBlank/") }
                 });

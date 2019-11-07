@@ -72,5 +72,27 @@ namespace April.Simple.WebApi.Controllers
             bitmap.Save(stream, ImageFormat.Gif);
             return File(stream.ToArray(), "image/gif");
         }
+
+        [HttpGet]
+        [Route("LogLevel")]
+        public ResponseDataEntity Set()
+        {
+            //日志等级由系统维护，通过配置参数获取
+            //系统临时设置日志级别，log4可直接设置为ALL级别，如果需要测试接口等其他级别可通过这个配置调整
+            CacheUtil.Add("LogLevel", "ERROR", new TimeSpan(0, 5, 0));
+            return ResponseUtil.Success();
+        }
+
+        [HttpGet]
+        [Route("Log")]
+        public ResponseDataEntity Log()
+        {
+            LogUtil.Debug("Debug");
+            LogUtil.Info("Info");
+            LogUtil.Warn("Warn");
+            LogUtil.Error("Error");
+            LogUtil.Fatal("Fatal");
+            return ResponseUtil.Success();
+        }
     }
 }
