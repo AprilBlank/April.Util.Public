@@ -21,7 +21,7 @@
 
 #### 引入
 
-教程地址：[net core WebApi——公用库April.Util公开及发布]()
+教程地址：[net core WebApi——公用库April.Util公开及发布](https://www.cnblogs.com/AprilBlank/p/11812267.html)
 
 ##### dll
 
