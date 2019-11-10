@@ -31,6 +31,7 @@
 - Microsoft.AspNetCore.Http.Abstractions
 - Microsoft.AspNetCore.Http.Extensions
 - Microsoft.AspNetCore.Mvc.Abstractions
+- Microsoft.AspNetCore.Mvc.Core
 - Microsoft.AspNetCore.Session
 - Microsoft.Extensions.Caching.Memory
 - Microsoft.Extensions.Configuration
@@ -50,4 +51,5 @@
 
 #### 更新日志
 
+- 2019-11-10 权限相关TokenUtil，权限校验整合，具体可见[net core WebApi——April.Util更新之权限](https://www.cnblogs.com/AprilBlank/p/11832324.html)
 - 2019-11-7 April.Util.1.0 先出来了

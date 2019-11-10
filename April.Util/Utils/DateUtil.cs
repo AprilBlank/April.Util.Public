@@ -44,7 +44,7 @@ namespace April.Util
         {
             //DateTime startTime = TimeZone.CurrentTimeZone.ToLocalTime(new DateTime(1970, 1, 1));
             DateTime startTime = TimeZoneInfo.ConvertTime(new DateTime(1970, 1, 1, 8, 0, 0), TimeZoneInfo.Local);
-            return (date - startTime).TotalSeconds;
+            return (int)((date - startTime).TotalSeconds);
         }
         /// <summary>
         /// 获取时间戳

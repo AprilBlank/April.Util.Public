@@ -41,7 +41,7 @@ namespace April.Util.Extension
             {
                 if (!string.IsNullOrEmpty(value))
                 {
-                    obj = (T)JsonConvert.DeserializeObject(value);
+                    obj = JsonConvert.DeserializeObject<T>(value);
                 }
             }
             catch (Exception ex)

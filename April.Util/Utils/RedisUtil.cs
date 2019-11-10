@@ -46,7 +46,7 @@ namespace April.Util
         /// <param name="key">缓存Key</param>
         /// <param name="value">缓存Value</param>
         /// <returns></returns>
-        public void AddString(string key, string value)
+        public static void AddString(string key, string value)
         {
             if (!AprilConfig.IsOpenRedis || string.IsNullOrEmpty(key))
             {
@@ -60,7 +60,7 @@ namespace April.Util
         /// <param name="key">缓存Key</param>
         /// <param name="value">缓存Value</param>
         /// <returns></returns>
-        public void Add<T>(string key, T value)
+        public static void Add<T>(string key, T value)
         {
             if (!AprilConfig.IsOpenRedis || string.IsNullOrEmpty(key) || value == null)
             {
@@ -78,7 +78,7 @@ namespace April.Util
         /// <param name="key">缓存Key</param>
         /// <param name="defaultValue">默认值</param>
         /// <returns></returns>
-        public string GetString(string key, string defaultValue = "")
+        public static string GetString(string key, string defaultValue = "")
         {
             if (!AprilConfig.IsOpenRedis || string.IsNullOrWhiteSpace(key))
             {
@@ -96,7 +96,7 @@ namespace April.Util
         /// </summary>
         /// <param name="key">缓存Key</param>
         /// <returns></returns>
-        public T Get<T>(string key)
+        public static T Get<T>(string key)
         {
             string value = GetString(key);
             if (string.IsNullOrEmpty(value))
@@ -113,7 +113,7 @@ namespace April.Util
         /// </summary>
         /// <param name="key">缓存Key</param>
         /// <returns></returns>
-        public void Remove(string key)
+        public static void Remove(string key)
         {
             if (!AprilConfig.IsOpenRedis || string.IsNullOrWhiteSpace(key))
             {

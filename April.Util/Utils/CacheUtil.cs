@@ -84,7 +84,7 @@ namespace April.Util
         /// </summary>
         /// <param name="key">缓存Key</param>
         /// <returns></returns>
-        public void Remove(string key)
+        public static void Remove(string key)
         {
             if (string.IsNullOrEmpty(key))
             {

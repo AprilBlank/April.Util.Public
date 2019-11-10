@@ -346,6 +346,104 @@ namespace April.Util.Config
         }
         #endregion
 
+        #region========权限登录========
+        private static string _TokenSecretFormat = string.Empty;
+        private static string _TokenCacheType = string.Empty;
+        private static string _AllowSliding = string.Empty;
+        private static string _AllowMuiltiLogin = string.Empty;
+        /// <summary>
+        /// token加密串格式
+        /// </summary>
+        public static string TokenSecretFormat
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_TokenSecretFormat))
+                {
+                    _TokenSecretFormat = Configuration["LoginSettings:TokenSecretFormat"];
+                }
+                if (string.IsNullOrEmpty(_TokenSecretFormat))
+                {
+                    //不设置采取默认
+                    _TokenSecretFormat = "april{id}&&&&{ts}";
+                }
+                return _TokenSecretFormat;
+            }
+        }
+        /// <summary>
+        /// 存储Token方式
+        /// </summary>
+        public static AprilEnums.TokenCacheType TokenCacheType
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_TokenCacheType))
+                {
+                    _TokenCacheType = Configuration["LoginSettings:TokenCacheType"];
+                }
+                if (string.IsNullOrEmpty(_TokenCacheType))
+                {
+                    //不设置采取默认
+                    _TokenCacheType = "Session";
+                }
+                switch (_TokenCacheType.ToLower())
+                {
+                    case "cookie":
+                        return AprilEnums.TokenCacheType.Cookie;
+                        break;
+                    case "cache":
+                        return AprilEnums.TokenCacheType.Cache;
+                        break;
+                    case "session":
+                        return AprilEnums.TokenCacheType.Session;
+                        break;
+                    case "redis":
+                        return AprilEnums.TokenCacheType.Redis;
+                        break;
+                    default:
+                        return AprilEnums.TokenCacheType.Session;
+                        break;
+                }
+            }
+        }
+        /// <summary>
+        /// 允许滑动过期
+        /// </summary>
+        public static bool AllowSliding
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_AllowSliding))
+                {
+                    _AllowSliding = Configuration["LoginSettings:AllowSliding"];
+                }
+                if (!string.IsNullOrEmpty(_AllowSliding) && _AllowSliding.ToLower() == "true")
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+        /// <summary>
+        /// 多端登录
+        /// </summary>
+        public static bool AllowMuiltiLogin
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_AllowMuiltiLogin))
+                {
+                    _AllowMuiltiLogin = Configuration["LoginSettings:AllowMuiltiLogin"];
+                }
+                if (!string.IsNullOrEmpty(_AllowMuiltiLogin) && _AllowMuiltiLogin.ToLower() == "true")
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+        #endregion
+
         #region ========当前页面========
         /// <summary>
         /// 当前请求页面

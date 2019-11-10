@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace April.Util.Entities.Response
+﻿namespace April.Util.Entities.Response
 {
     public class ResponseDataEntity
     {
         private int _Code = 0;
         private string _Msg = string.Empty;
-        private int _Count = 0;
+        private int? _Count = null;
         private object _Data = default;
         /// <summary>
         /// 回调码
@@ -21,7 +17,7 @@ namespace April.Util.Entities.Response
         /// <summary>
         /// 数据总数
         /// </summary>
-        public int Count { get => _Count; set => _Count = value; }
+        public int? Count { get => _Count; set => _Count = value; }
         /// <summary>
         /// 回调数据
         /// </summary>

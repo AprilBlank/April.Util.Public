@@ -1,5 +1,6 @@
 using April.Util;
 using April.Util.Config;
+using April.Util.Middles;
 using April.Util.Options;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -86,6 +87,8 @@ namespace April.Simple.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            
+
             #region Swagger
             app.UseSwagger();
             app.UseSwaggerUI(options =>
@@ -96,6 +99,8 @@ namespace April.Simple.WebApi
             });
             #endregion
             app.UseSession();
+
+            app.UseMiddleware<AprilAuthorizationMiddleware>();
 
             app.UseHttpsRedirection();
 

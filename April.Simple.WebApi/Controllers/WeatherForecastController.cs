@@ -75,6 +75,7 @@ namespace April.Simple.WebApi.Controllers
 
         [HttpGet]
         [Route("LogLevel")]
+        [AprilPermission("weatherforecast", "set")]
         public ResponseDataEntity Set()
         {
             //日志等级由系统维护，通过配置参数获取
@@ -85,6 +86,7 @@ namespace April.Simple.WebApi.Controllers
 
         [HttpGet]
         [Route("Log")]
+        [AprilPermission("weatherforecast","log")]
         public ResponseDataEntity Log()
         {
             LogUtil.Debug("Debug");
